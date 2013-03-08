@@ -3,3 +3,9 @@ constantine:
  last_name: "Antonakos"
  email: "con.antonakos@gmail.com"
  profile_name: "conantonakos"
+
+doug:
+ first_name: "Doug"
+ last_name: "Imbruce"
+ email: "d@qwiki.com"
+ profile_name: "dimbruce"
