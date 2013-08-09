@@ -1,27 +1,33 @@
 
 <div class="row">
 	<div class="span4">
+	</div>
+
+	<div class="span4">
 	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "well"}) do |f| %>
 
+
 	<fieldset>
-		<legend>Sign in</legend>
-	  
-	<%= f.input :email %>
+		<h4 style="padding-bottom: 10px">Log in to iStatus</h4>
 
-	<%= f.input :password %>
+	  	<%= link_to image_tag("sign-in-with-twitter-gray.png", alt: "Twitter"),
+	  		"/auth/twitter" %>
+	  	<hr>
+		<%= f.input_field :email, placeholder: "Email", :autofocus => true %>
 
-	<% if devise_mapping.rememberable? -%>
-		<div><%= f.input :remember_me, as: :boolean %> </div>
-	<% end -%>
+		<%= f.input_field :password, placeholder: "Password" %>
 
-	<div><%= f.button :submit, "Sign in" %></div>
+		<% if devise_mapping.rememberable? -%>
+			<div><%= f.input :remember_me, as: :boolean, :label => false, :inline_label => true %>
+			</div>
+		<% end -%>
+
+		<div><%= f.button :submit, "Sign in", :class => "btn btn-primary" %></div>
 	</fieldset>
 	<% end %>
-
-	<%= render "devise/shared/links" %>
+	</div>
+	<div class="span4">
 	</div>
 
-	<div class="span8">
-		<h2>Signing in is easy and secure</h2>
-	</div>
+
 </div>

@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-
-gem 'rails'
-
+gem 'rails', '~>3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'devise'
-gem 'simple_form'
+gem "devise", "~>2.2.3"
+gem "omniauth", "1.0.2"
+gem "omniauth-twitter"
+gem "simple_form"
+
+
+gem 'railties', '~>3.2.14'
 
 group :production do
 	gem 'pg'
@@ -21,7 +23,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'
+  gem 'sass-rails', "~>3.2.4"
   gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
